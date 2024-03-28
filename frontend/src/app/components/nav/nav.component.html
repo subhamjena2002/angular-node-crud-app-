@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>CarRental</span>
+  <span class="example-spacer"></span>
+  <span><small [routerLink]="['/home/categorie']">Categories</small></span>
+  <span><small class="mx-3" [routerLink]="['/home/about']">About</small></span>
+  <span><small [routerLink]="['/home/contact ']">Contact us</small></span>
+  <button class="mx-4" mat-button color="accent" (click)="logout()" type="button"><span>Logout</span></button>
+  <button mat-icon-button class="example-icon" [routerLink]="['/home/cart']"
+    aria-label="Example icon-button with share icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+
+ 
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+ 
+
+
+</mat-toolbar>

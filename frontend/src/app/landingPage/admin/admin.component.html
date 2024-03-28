@@ -1,0 +1,41 @@
+<h2 class="text-center">Admin Panel</h2>
+<div class="bg-dark h-100 admin_body">
+    <div class="p-5">
+        <mat-tab-group>
+            <mat-tab class="tab_body" label="User Details">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Action</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of userDtails">
+                            <td>
+                                <button mat-raised-button color="primary" class="mx-2" (click)=" setUserData(user.id);openModal()">Update</button>
+                                <button mat-raised-button color="warn" (click)="deleteUser(user.id)">Delete</button>
+                            </td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.password }}</td>
+                            <td>{{ user.phoneno }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <mat-paginator [length]="userDtails.length"
+                               [pageIndex]="currentPage"
+                               [pageSize]="pageSize"
+                               [pageSizeOptions]="pageSizeOptions"
+                               (page)="handlePageEvent($event)"
+                               aria-label="Select page">
+                </mat-paginator> -->
+            </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3 </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

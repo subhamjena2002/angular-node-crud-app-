@@ -1,0 +1,25 @@
+.admin_heading{
+   
+    padding: 2%;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+
+.admin_body{
+    overflow: hidden;
+}
+
+.table .table-bordered ,td{
+    background-color:#e8edef;
+    border: 3px solid white;
+    padding: 10px;
+    
+}
+
+.table .table-bordered ,th{
+    background-color:#8d46e3;
+    color: white;
+    border: 3px solid white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+

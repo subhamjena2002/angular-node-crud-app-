@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <h2>Signup</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form_container">
+    
+        <div class="form-group">
+            <label for="fullname">Full name</label>
+            <input type="text" class="form-control" id="Full_name"
+                 name="Full_name"  formControlName="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email"
+            formControlName="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password"
+            formControlName="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Confirm Password</label>
+            <input type="password" class="form-control" id="password"
+                 name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Phone Number</label>
+            <input type="number" class="form-control mb-2" id="password"
+            formControlName="phoneno" name="password" required>
+        </div>
+        <div>
+            <select name="" id="">
+                <option value="user">User</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success   mx-2">Sign Up</button>
+        <button type="reset" class="btn btn-primary  w-50" >Reset</button>
+    </form>
+</div>
